@@ -12,12 +12,12 @@ function sendEmail($to, $subject, $body) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'shrunga29mysore@gmail.com'; // Updated with your actual email
-        $mail->Password   = 'eiglydzbqaldrnf';     // Updated with your actual App Password (spaces removed)
+        $mail->Username   = 'your_email@gmail.com'; // Updated with your actual email
+        $mail->Password   = 'password';     // Updated with your actual App Password (spaces removed)
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        $mail->setFrom('shrunga29mysore@gmail.com', 'EV Recharge Network');
+        $mail->setFrom('your_email@gmail.com', 'EV Recharge Network');
         $mail->addAddress($to);
 
         $mail->isHTML(true);
@@ -39,13 +39,13 @@ function sendBookingConfirmation($toEmail, $userName, $bunkName, $bookingDate, $
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'shrunga29mysore@gmail.com'; 
-        $mail->Password   = 'eiglydzbqaldrnf'; // Spaces removed
+        $mail->Username   = 'your_email@gmail.com'; 
+        $mail->Password   = 'password'; // Spaces removed
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
         // Recipients
-        $mail->setFrom('shrunga29mysore@gmail.com', 'EV Recharge Network');
+        $mail->setFrom('your_email@gmail.com', 'EV Recharge Network');
         $mail->addAddress($toEmail, $userName);
 
         // Content
